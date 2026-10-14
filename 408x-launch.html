@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>408X 上市整合传播方案</title>
+<style>
+:root{
+  --ink:#0F172A; --slate:#475569; --muted:#64748B; --faint:#94A3B8;
+  --line:#E2E8F0; --bg:#F8FAFC; --card:#FFFFFF;
+  --brand:#16305B; --brand-2:#2B4FA8; --brand-soft:#EEF3FF;
+  --acc:#0E7490; --acc-soft:#ECFEFF;
+  --warn:#B45309; --warn-soft:#FFF7ED;
+  --radius:14px; --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--brand-2);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:54px}
+.nav .brand{font-weight:800;font-size:13.5px;color:var(--brand);letter-spacing:.02em;white-space:nowrap}
+.nav ul{display:flex;gap:1px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto}
+.nav li a{display:block;padding:6px 9px;font-size:12.5px;color:var(--slate);border-radius:8px;white-space:nowrap}
+.nav li a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+
+.cover{background:linear-gradient(180deg,#0E1E3A 0%,#17325F 100%);color:#fff;padding:64px 0 48px}
+.cover .kicker{display:inline-block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#9DB4E0;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.cover h1{font-size:38px;line-height:1.25;margin:0 0 12px;font-weight:800;letter-spacing:.01em}
+.cover .sub{font-size:15.5px;color:#C7D3E8;max-width:720px;margin:0 0 26px}
+.cover .tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.cover .tags span{font-size:12.5px;color:#DCE6F7;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 13px}
+.cover .note{font-size:12px;color:#93A6C8;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;max-width:760px}
+
+main{padding:6px 0 40px}
+section{padding:40px 0 6px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.sec-no{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:var(--brand);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.sec-head h2{font-size:23px;margin:1px 0 3px;font-weight:800;letter-spacing:.01em}
+.sec-head p{margin:0;color:var(--muted);font-size:13.5px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px}
+.card h3{font-size:16px;margin:0 0 12px;font-weight:800;display:flex;align-items:center;gap:8px}
+.card h3::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--brand-2);display:inline-block}
+.card h4{font-size:14px;margin:16px 0 8px;font-weight:800;color:var(--brand)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:820px){.grid2,.grid3,.grid4{grid-template-columns:1fr}.cover h1{font-size:29px}}
+
+.blk{border-radius:12px;padding:15px 17px;border:1px solid var(--line);background:#fff}
+.blk.acc{border-color:#BAE6EE;background:linear-gradient(180deg,#F6FEFF,#fff)}
+.blk.acc .tag{color:var(--acc)}
+.blk.warn{border-color:#FCD9A8;background:linear-gradient(180deg,#FFFBF5,#fff);border-style:dashed}
+.blk.warn .tag{color:var(--warn)}
+.blk .tag{font-size:11.5px;font-weight:800;letter-spacing:.04em;display:block;margin-bottom:7px}
+.blk.concl{border-color:#C7D2FE;background:linear-gradient(180deg,#F5F7FF,#fff)}
+.blk.concl .tag{color:var(--brand-2)}
+
+ul.clean{margin:6px 0 0;padding-left:18px;color:var(--slate)}
+ul.clean li{margin:4px 0}
+.lead{font-size:15px;color:var(--slate)}
+.k{font-weight:700;color:var(--ink)}
+.note{font-size:12px;color:var(--muted);background:#F1F5F9;border:1px dashed #CBD5E1;border-radius:10px;padding:10px 12px;margin-top:12px}
+
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;overflow:hidden;border:1px solid var(--line);border-radius:12px}
+.tbl th,.tbl td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.tbl thead th{background:#F1F5F9;font-weight:800;font-size:12.5px}
+.tbl tbody tr:nth-child(even){background:#FAFCFE}
+.tbl tbody tr:last-child td{border-bottom:none}
+.scroll{overflow-x:auto}
+.scroll .tbl{min-width:760px}
+
+/* 3-step strategy */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{border:1px solid var(--line);border-radius:12px;padding:15px;background:#fff;border-top:3px solid var(--brand-2)}
+.step .n{font-size:11px;font-weight:800;color:var(--brand-2);letter-spacing:.06em}
+.step .h{font-weight:800;font-size:15px;margin:4px 0 6px}
+.step .b{font-size:12.5px;color:var(--slate);line-height:1.6}
+
+/* nodes */
+.nodes{display:flex;gap:0;flex-wrap:wrap;align-items:stretch}
+.node{flex:1 1 160px;min-width:150px;border:1px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;position:relative}
+.node .step{font-size:10.5px;font-weight:800;color:var(--acc);letter-spacing:.08em}
+.node .h{font-weight:800;font-size:13.5px;margin:3px 0 5px}
+.node .b{font-size:12px;color:var(--slate);line-height:1.55}
+.node .m{font-size:11px;color:var(--faint);margin-top:6px;border-top:1px dashed var(--line);padding-top:5px}
+.arw{display:flex;align-items:center;color:var(--faint);font-weight:800;padding:0 6px}
+@media(max-width:820px){.arw{transform:rotate(90deg);padding:4px 0}}
+
+.stat{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:#fff}
+.stat .num{font-size:22px;font-weight:800;color:var(--brand)}
+.stat .lbl{font-size:12.5px;color:var(--muted);margin-top:2px}
+
+.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:820px){.chain{grid-template-columns:1fr}}
+.chain .c{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
+.chain .c .k{font-size:11.5px;font-weight:800;color:var(--brand-2);letter-spacing:.05em}
+.chain .c .t{font-weight:800;margin:4px 0 6px}
+.chain .c ul{margin:0;padding-left:16px;color:var(--slate);font-size:12.5px}
+
+/* anchors & clickable headings */
+[id]{scroll-margin-top:72px}
+.card>h3 .hlink{color:inherit;text-decoration:none;display:inline-flex;align-items:center}
+.card>h3 .hmark{opacity:0;margin-left:6px;color:var(--brand-2);font-size:12px;font-weight:800;transition:opacity .15s}
+.card>h3:hover .hmark{opacity:.75}
+
+/* role badges */
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0 0}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.02em;border-radius:999px;padding:2px 9px;border:1px solid;white-space:nowrap}
+.badge.client{color:#B45309;background:#FFF7ED;border-color:#FCD9A8}
+.badge.team{color:#475569;background:#F1F5F9;border-color:#CBD5E1}
+.badge.me{color:#0E7490;background:#ECFEFF;border-color:#BAE6EE}
+.sec-head .badge{margin-top:7px}
+
+footer{border-top:1px solid var(--line);background:#fff;padding:24px 0;margin-top:28px;color:var(--muted);font-size:12.5px}
+hr.sep{border:none;border-top:1px solid var(--line);margin:24px 0}
+@media print{
+  .nav{display:none}.cover{padding:34px 0 26px}body{background:#fff}
+  section{padding:18px 0 4px;page-break-inside:avoid}.card{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">408X 上市整合传播方案</div>
+    <ul>
+      <li><a href="#s1">背景与目标</a></li>
+      <li><a href="#s2">品牌与产品</a></li>
+      <li><a href="#s3">竞品对标分析</a></li>
+      <li><a href="#s4">核心策略</a></li>
+      <li><a href="#s5">内容体系</a></li>
+      <li><a href="#s6">传播节点</a></li>
+      <li><a href="#s7">渠道与节奏</a></li>
+      <li><a href="#s8">KPI</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="kicker">New Car Launch · Integrated Communication Plan</span>
+    <h1>标致 408X 上市整合传播方案</h1>
+    <p class="sub">承接 408X 上市整合传播任务：从品牌理念与产品理解、竞品对标诊断，到差异化策略、内容与节点传播方式、效果衡量的完整提案。</p>
+    <div class="tags">
+      <span>品牌与产品理解</span>
+      <span>竞品对标分析</span>
+      <span>差异化策略</span>
+      <span>传播节点与方式</span>
+      <span>效果衡量</span>
+    </div>
+    <div class="note">本方案基于一次真实的新车上市整合传播项目整理，按乙方承接甲方传播任务的提案口径撰写；为保护商业信息，已隐去客户与代理方名称。</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="legend">
+  <b style="color:var(--ink)">职责标注</b>
+  <span><span class="badge client">甲方给定</span> 品牌方确认的方向与节点</span>
+  <span><span class="badge team">团队确认</span> 乙方团队集体产出</span>
+  <span><span class="badge me">本人参与</span> 个人实际参与 / 负责的环节</span>
+</div>
+
+<!-- ===== 1 背景与营销目标 ===== -->
+<section id="s1">
+  <div class="sec-head">
+    <div class="sec-no">01</div>
+    <div><h2>背景与营销目标</h2><p>先明确甲方委托的任务边界与要达成的结果</p><span class="badge client">甲方给定</span></div>
+  </div>
+
+  <div class="card">
+    <h3>项目背景</h3>
+    <p class="lead" style="margin-top:0"><b>408X</b> 是标致品牌焕新背景下推出的全新无界座驾，官方定位<b>"新法式无界座驾"</b>，落在 <b>14.57–17.97 万元</b>这一竞争最密集的价格带。该区间同时被同级合资运动轿跑与自主车型占据，用户注意力与决策路径已高度内容化。</p>
+    <div class="grid2" style="margin-top:14px">
+      <div class="blk acc">
+        <span class="tag">委托内容</span>
+        <ul class="clean">
+          <li>甲方委托乙方承接 408X <b>上市整合传播</b>。</li>
+          <li>核心节点为<b>上海国际车展上市</b>，并延续至<b>试驾传播</b>。</li>
+          <li>形式覆盖车展集中传播、平台专访、KOL 打卡、区域试驾。</li>
+        </ul>
+      </div>
+      <div class="blk acc">
+        <span class="tag">执行节奏</span>
+        <ul class="clean">
+          <li><b>上海车展正式上市</b> → <b>试驾传播</b>（贯穿整个上市周期）。</li>
+          <li>上市窗口有限，认知必须在窗口内建立、放大并推进到体验。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>营销目标（分层设定）</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>目标层</th><th>我们要达成的结果</th><th>判断标准</th></tr></thead>
+        <tbody>
+          <tr><td><strong>认知层</strong></td><td>让目标人群建立"无界"的差异化认知，而非只记住参数</td><td>品牌与车型搜索、相关讨论量提升</td></tr>
+          <tr><td><strong>声量层</strong></td><td>在车展等关键节点形成集中传播峰值，带动持续讨论</td><td>见刊量、平台推荐、声量峰值</td></tr>
+          <tr><td><strong>体验层</strong></td><td>把"看到"推进到"想试"，为到店与试驾蓄水</td><td>试驾预约、有效线索</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="blk concl" style="margin-top:14px">
+      <span class="tag">营销任务（结论）</span>
+      <p style="margin:0">在上市窗口内，围绕<b>"无界"</b>建立差异化认知，在车展节点集中引爆声量，并把认知推进到<b>试驾与到店</b>——完成"认知建立 → 声量引爆 → 体验深化"的完整覆盖。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2 品牌与产品 ===== -->
+<section id="s2">
+  <div class="sec-head">
+    <div class="sec-no">02</div>
+    <div><h2>品牌理念与产品理解</h2><p>承接执行的前提，是先把品牌和产品讲清楚</p><span class="badge client">品牌既有</span></div>
+  </div>
+
+  <div class="card">
+    <h3>品牌理念</h3>
+    <p class="lead" style="margin-top:0">标致品牌以<b>法式设计美学</b>与<b>运动基因</b>为底色，408X 是其品牌焕新之作，核心主张是<b>"无界"</b>——打破车型类别与生活方式之间的边界。</p>
+    <div class="grid3" style="margin-top:14px">
+      <div class="blk acc"><span class="tag">设计美学</span><p style="margin:0">法式设计语言与狮魂美学，是品牌最直观的记忆点，也是视觉类内容与车展传播的基础。</p></div>
+      <div class="blk acc"><span class="tag">运动基因</span><p style="margin:0">赛道与底盘调校积淀，支撑"好开、有驾驶乐趣"的产品印象，是试驾内容的信任来源。</p></div>
+      <div class="blk acc"><span class="tag">无界主张</span><p style="margin:0">"生而无界"的态度主张，与目标人群的自我表达诉求高度契合。</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>产品理解：三层价值结构</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>层级</th><th>内容</th><th>408X 对应</th></tr></thead>
+        <tbody>
+          <tr><td><strong>产品事实</strong></td><td>产品客观具备的特征</td><td>中型无界掀背车身、Fastback 溜背造型（14° 倾角 / 0.27Cd）、CLDR 运动底盘、1.6T + 8AT 动力总成、i-Cockpit 座舱</td></tr>
+          <tr><td><strong>用户价值</strong></td><td>这些特征为用户带来什么</td><td>一车多能、个性辨识度、驾驶乐趣与操控信心</td></tr>
+          <tr><td><strong>传播主张</strong></td><td>希望受众最终记住的那句话</td><td>以"无界"为核心，贯穿全部内容</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="blk concl" style="margin-top:14px">
+      <span class="tag">为什么执行环节要先理解这些</span>
+      <ul class="clean" style="margin-top:2px">
+        <li>稿件审核与改稿需要判断"<b>什么该说、怎么说</b>"：口径是否与品牌一致、卖点是否有产品支撑、表达是否合规。</li>
+        <li>竞品分析需要先知道"<b>我们比谁强、强在哪</b>"，才能把差异化落到对比稿与达人内容里。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3 竞品分析 ===== -->
+<section id="s3">
+  <div class="sec-head">
+    <div class="sec-no">03</div>
+    <div><h2>竞品对标分析与营销方向</h2><p>投放之前：对标差异，落到既定的营销方向与宣传打法</p><span class="badge me">本人参与</span></div>
+  </div>
+
+  <div class="card">
+    <h3>竞品研究的任务</h3>
+    <p class="lead" style="margin-top:0">品牌方在任务书中<b>已给定营销方向</b>——以"无界"为核心（产品定位"新法式无界座驾"、主题"生而无界"、用户价值"无界 Life"），因此本节不重复论证方向，而是解决执行问题：<b>宣传什么、怎么宣传、放在什么节奏</b>。分析顺序为：圈定竞品 → 选定对标车型 → 拆解其定位与打法 → 把既定方向落成可执行的宣传点与打法，作为第 04–07 节的输入。</p>
+  </div>
+
+  <div class="card">
+    <h3>第一步 · 竞争格局与我方宣传切入点</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>竞争类型</th><th>代表车型</th><th>竞品打法</th><th>我方宣传切入点</th><th>依据</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>同级合资运动轿跑</strong></td>
+            <td>大众凌渡 L、本田英仕派</td>
+            <td>主打颜值与运动感，"无框车门"等强记忆点制造社交话题</td>
+            <td>不正面拼颜值，主推<b>"空间 + 通过性"的场景价值</b>（自驾 / 露营），用对比稿把差异讲透</td>
+            <td>凌渡 L 在"颜值/轿跑"上已占心智，正面硬碰会陷入同质化；408X 的差异在形态与底盘，而非单纯外观</td>
+          </tr>
+          <tr>
+            <td><strong>合资中高级轿车</strong></td>
+            <td>大众 CC、福特蒙迪欧、马自达阿特兹</td>
+            <td>强调尺寸、动力与品牌积淀</td>
+            <td>避开尺寸与品牌对抗，主推<b>"一车多能"的个性化场景</b></td>
+            <td>408X 尺寸接近但形态不同；用"无界"避开传统中高级的"商务 / 稳重"语境</td>
+          </tr>
+          <tr>
+            <td><strong>自主运动 / 新能源</strong></td>
+            <td>该价格带自主车型</td>
+            <td>高频内容种草、参数与价格对比</td>
+            <td>用<b>真实体验与口碑</b>对抗参数战，强化"设计 + 驾控"的感性价值</td>
+            <td>参数与堆料比不过自主车型；408X 的优势是可感知的设计与驾驶体验</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>第二步 · 对标车型的选定</h3>
+    <div class="blk acc">
+      <span class="tag">圈定候选竞品池（公开对比平台常见）</span>
+      <p style="margin:0">大众凌渡 L、大众 CC、本田英仕派、福特蒙迪欧、马自达阿特兹 等。</p>
+    </div>
+    <div class="blk concl" style="margin-top:12px">
+      <span class="tag">选定核心对标车型：大众凌渡 L</span>
+      <p style="margin:0">按<b>价格带、车身形态、目标人群、传播抓手</b>四个维度筛选，凌渡 L 与 408X 重合度最高——价格带高度重叠、人群同为追求个性的年轻用户、且同样以"轿跑 / 无界"作为传播抓手。因此选定凌渡 L 作为核心对标车型，作为下一步确定宣传打法的直接参照。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>第三步 · 对标车型拆解：408X vs 凌渡 L</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>对比维度</th><th>标致 408X</th><th>大众凌渡 L</th><th>可转化为的宣传点</th></tr></thead>
+        <tbody>
+          <tr><td><strong>车型定位</strong></td><td>新法式无界座驾</td><td>宽体轿跑（运动轿跑）</td><td>凌渡 L 已占位"轿跑 / 运动"，我方主推"一车多能"的场景价值，避开正面对比</td></tr>
+          <tr><td><strong>级别与尺寸</strong></td><td>中型无界掀背｜4705×1859×1502｜轴距 2787</td><td>紧凑型轿跑｜4784×1831×1469｜轴距 2731</td><td>更宽、更高、轴距更长 → 对比稿可主打"更大的空间与通过性"</td></tr>
+          <tr><td><strong>车身形态</strong></td><td>无界掀背（轿跑 + SUV 混合形态）</td><td>溜背轿跑 + 无框车门 + 掀背尾门</td><td>凌渡 L 视觉冲击强，不宜正面比颜值；408X 用"一车多能"场景建立差异</td></tr>
+          <tr><td><strong>动力总成</strong></td><td>1.6T + 8AT｜175 马力 / 250N·m</td><td>1.4T + 7DCT｜150 马力 / 250N·m</td><td>排量与马力更高、8AT 更平顺 → 可作为对比稿的硬指标优势</td></tr>
+          <tr><td><strong>底盘操控</strong></td><td>CLDR 大师级运动底盘、赛道基因</td><td>MQB EVO 平台、德系调校</td><td>用试驾与评测内容输出"更好开"，建立体验差异</td></tr>
+          <tr><td><strong>设计语言</strong></td><td>法式设计、狮魂美学、Fastback 0.27Cd</td><td>德系宽体、无框车门、凌厉前脸</td><td>以法式审美差异避开德系同质</td></tr>
+          <tr><td><strong>智能配置</strong></td><td>i-Cockpit、Drive Assist 2.0</td><td>IQ.Light、IQ.智慧车联</td><td>各有侧重，非决定性差异，不作主打</td></tr>
+          <tr><td><strong>价格区间</strong></td><td>14.57–17.97 万</td><td>约 15–19 万</td><td>价格更友好 → 在对比稿中转化为"更值"的决策理由</td></tr>
+          <tr><td><strong>目标人群</strong></td><td>Z 世代、追求个性与"无界"</td><td>年轻、追求运动与个性</td><td>人群重合，需用差异化主张抢先占位</td></tr>
+          <tr><td><strong>传播打法</strong></td><td>（本方案）设计 + 驾控 + 体验</td><td>颜值 + 社交话题 + 无框车门</td><td>明确错位：不比颜值，比"多能 + 驾控 + 价值"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">竞品参数来源于公开配置信息（汽车之家、易车、懂车帝、上汽大众官网等），价格以指导价区间呈现，仅用于投放前的传播分析。</div>
+  </div>
+
+  <div class="card">
+    <h3>第四步 · 分析产出：当时确认的营销方向</h3>
+    <p style="margin-top:0;color:var(--muted);font-size:13px">营销方向由品牌方在任务书中确认，本节只做<b>总结与澄清</b>；具体的宣传点、传播方式与节奏见第 06 节。</p>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>维度</th><th>当时确认的内容</th></tr></thead>
+        <tbody>
+          <tr><td><strong>产品定位</strong></td><td>"新法式无界座驾"</td></tr>
+          <tr><td><strong>核心主题</strong></td><td>"生而无界"，对外以"无界之王"作为记忆标签</td></tr>
+          <tr><td><strong>用户价值主张</strong></td><td>"无界 Life"——把"无界"从产品定位延展为一种拓宽边界的生活方式</td></tr>
+          <tr><td><strong>目标人群</strong></td><td>Z 世代：生来不被界限、规则自己定义、热爱非传统</td></tr>
+          <tr><td><strong>价值支撑</strong></td><td>美感、动感、质感（狮魂美学设计 + 法系驾控）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">以上为项目当时对外公开的营销方向，可公开查证。</div>
+  </div>
+
+  <div class="card">
+    <h3>目标人群与核心洞察</h3>
+    <div class="blk acc">
+      <span class="tag">人群画像</span>
+      <p style="margin:0">官方目标人群为 <b>Z 世代</b>，核心为 <b>25–35 岁</b>、集中在一二线及新一线城市、注重个性表达与审美的消费群体；反感被单一标签定义，购车决策前会大量对比，并高度依赖体验类内容。</p>
+    </div>
+    <h4>三条核心洞察</h4>
+    <div class="grid3">
+      <div class="blk"><span class="tag">洞察一 · 车是自我表达</span><p style="margin:0">他们要的不是一张参数清单，而是"这辆车代表我是谁"。传播必须提供<b>身份认同</b>，而不是功能罗列。</p></div>
+      <div class="blk"><span class="tag">洞察二 · 好奇需要场景</span><p style="margin:0">他们对"无界"有天然好奇，但需要<b>具体使用场景</b>来支撑理解——必须把"一车多能"讲成看得见的生活方式。</p></div>
+      <div class="blk"><span class="tag">洞察三 · 对比与体验定决策</span><p style="margin:0">决策前会反复对比、看体验内容。因此<b>对比稿建立位置、试驾内容促成决定</b>，是决策链上的关键触点。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4 核心策略 ===== -->
+<section id="s4">
+  <div class="sec-head">
+    <div class="sec-no">04</div>
+    <div><h2>核心传播策略</h2><p>用一条主张贯穿，用三步递进完成从认知到体验</p><span class="badge team">团队确认</span></div>
+  </div>
+
+  <div class="card">
+    <h3>核心创意主张</h3>
+    <div class="blk concl">
+      <span class="tag">主张（品牌方给定，详见第 03 节）</span>
+      <p style="margin:0;font-size:16px"><b>"生而无界"</b></p>
+      <p style="margin:8px 0 0">本节重点不是主张本身，而是<b>如何把它执行出去</b>——用哪几步、分哪几个打法、落到哪些内容与节点。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>策略主线：三步递进</h3>
+    <div class="steps">
+      <div class="step"><div class="n">STEP 01</div><div class="h">用设计抢注意</div><div class="b">以车展现场与视觉类内容，第一时间建立"狮魂美学 + 法式设计"的辨识度，解决"看不见"的问题。</div></div>
+      <div class="step"><div class="n">STEP 02</div><div class="h">用对比定位置</div><div class="b">以对比稿把"更大 / 更强 / 更值"讲清楚，解决"和谁比、值不值"的决策问题。</div></div>
+      <div class="step"><div class="n">STEP 03</div><div class="h">用体验促转化</div><div class="b">以试驾体验内容把兴趣推进到到店，解决"想不想试"的临门一脚。</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>三个核心打法</h3>
+    <div class="grid3">
+      <div class="blk acc"><span class="tag">打法一 · 集中引爆</span><p style="margin:0">把<b>车展作为唯一声量峰值节点</b>，媒体、达人、内容集中释放，用一次峰值带动持续讨论，而不是全程平均投放。</p></div>
+      <div class="blk acc"><span class="tag">打法二 · 分层说服</span><p style="margin:0"><b>不同内容各承担一个说服任务</b>，避免同质化曝光（内容与角色的分工见第 05 节）。</p></div>
+      <div class="blk acc"><span class="tag">打法三 · 体验承接</span><p style="margin:0">所有内容指向<b>试驾预约</b>，形成"看内容 → 做对比 → 去试驾"的闭环，避免传播停在曝光层。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5 内容体系 ===== -->
+<section id="s5">
+  <div class="sec-head">
+    <div class="sec-no">05</div>
+    <div><h2>核心信息体系与内容矩阵</h2><p>不同内容各司其职，而不是重复曝光</p><span class="badge team">团队确认</span></div>
+  </div>
+
+  <div class="card">
+    <h3>内容矩阵：六类内容的分工</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>内容类型</th><th>承担的角色</th><th>核心信息</th></tr></thead>
+        <tbody>
+          <tr><td><strong>主通稿</strong></td><td>建立定位认知、统一传播口径</td><td>无界定位 + 上市核心信息</td></tr>
+          <tr><td><strong>专题稿</strong></td><td>单点深化（设计 / 驾控）</td><td>设计美学或运动驾控</td></tr>
+          <tr><td><strong>深度对比稿</strong></td><td>解决"和谁比、值不值"的决策问题</td><td>对标凌渡 L 的差异化优势</td></tr>
+          <tr><td><strong>专访 / 高层对话</strong></td><td>品牌与战略背书</td><td>品牌愿景与产品战略</td></tr>
+          <tr><td><strong>KOL / 达人内容</strong></td><td>圈层渗透、口碑扩散</td><td>以创作者特色承载同一主张</td></tr>
+          <tr><td><strong>试驾体验内容</strong></td><td>体验深化、转化前置</td><td>真实驾驶感受与操控</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="blk concl" style="margin-top:14px">
+      <span class="tag">互补原则</span>
+      <p style="margin:0">各类内容围绕同一主张，但角度不重复：通稿讲"是什么"，专题稿讲"好在哪"，对比稿讲"为什么选我"，专访讲"谁在做"，达人内容讲"我怎么用"，试驾讲"开起来如何"。以此避免同质化曝光，让不同渠道各自承担不同的说服任务。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6 传播节点与传播方式 ===== -->
+<section id="s6">
+  <div class="sec-head">
+    <div class="sec-no">06</div>
+    <div><h2>传播节点与传播方式</h2><p>每个节点：怎么传、用什么内容、落在哪个渠道</p><span class="badge me">本人参与执行</span></div>
+  </div>
+
+  <div class="card">
+    <h3>链路总览</h3>
+    <div class="nodes">
+      <div class="node"><div class="step">NODE 01</div><div class="h">车展集中引爆</div><div class="b">媒体日集中释放，制造声量峰值</div><div class="m">渠道：车展 + 媒体 + 达人</div></div>
+      <div class="arw">→</div>
+      <div class="node"><div class="step">NODE 02</div><div class="h">平台专访 + 直播</div><div class="b">以专访与直播强化品牌背书</div><div class="m">渠道：垂类平台</div></div>
+      <div class="arw">→</div>
+      <div class="node"><div class="step">NODE 03</div><div class="h">达人扩散</div><div class="b">圈层渗透，扩散口碑</div><div class="m">渠道：社交平台 KOL</div></div>
+    </div>
+    <div class="nodes" style="margin-top:12px">
+      <div class="node"><div class="step">NODE 04</div><div class="h">试驾体验</div><div class="b">贯穿上市周期，把信息转化为真实体验</div><div class="m">渠道：一线城市试驾 + 当地媒体</div></div>
+      <div class="arw">→</div>
+      <div class="node" style="flex:1.2 1 180px;border-style:dashed"><div class="step">闭环</div><div class="h">数据回收</div><div class="b">见刊与效果数据回流，指导下一轮优化</div><div class="m">渠道：监测看板</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>各节点的传播方式</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th style="width:96px">节点</th><th>目标</th><th>传播方式（怎么传）</th><th>内容形式</th><th>渠道</th><th>衡量</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>01 车展引爆</strong></td>
+            <td>声量峰值</td>
+            <td>传播集中在<b>车展媒体日</b>：媒体与达人<b>展台打卡</b>后产出<b>媒体通稿</b>集中释放；现场配合直播与短视频快速扩散，形成短期声量峰值</td>
+            <td>媒体通稿 / 专题稿、现场图文与短视频</td>
+            <td>车展现场、垂类媒体、社交平台</td>
+            <td>见刊量、现场产出量</td>
+          </tr>
+          <tr>
+            <td><strong>02 平台专访</strong></td>
+            <td>品牌背书</td>
+            <td>在<b>汽车垂类平台</b>执行 QA 专访，<b>专访 QA 问题由我方自行设计</b>；专访之外配合<b>直播</b>，逐点展示产品卖点，为传播提供背书</td>
+            <td>QA 专访稿、访谈 / 直播视频</td>
+            <td>垂类平台</td>
+            <td>发布量、阅读 / 播放</td>
+          </tr>
+          <tr>
+            <td><strong>03 达人扩散</strong></td>
+            <td>圈层渗透</td>
+            <td>车展期间依据达人名单分批邀约打卡；<b>车展后与达人约稿、专项输出</b>内容，按创作者特色统一口径、不统一表达，向年轻圈层渗透</td>
+            <td>KOL 打卡内容、社交话题</td>
+            <td>社交平台</td>
+            <td>传播量、互动</td>
+          </tr>
+          <tr>
+            <td><strong>04 试驾体验</strong></td>
+            <td>体验深化</td>
+            <td><b>试驾传播贯穿整个上市周期</b>：上市前已有部分试驾；上市后依次在全国<b>一线城市落地专门试驾</b>，<b>邀约当地媒体</b>参与，对接城市终端与时间，产出真实驾驶体验内容</td>
+            <td>试驾体验稿、体验视频</td>
+            <td>全国一线城市试驾活动、当地媒体</td>
+            <td>试驾邀约数、内容量</td>
+          </tr>
+          <tr>
+            <td><strong>05 数据回收</strong></td>
+            <td>效果衡量</td>
+            <td>收集媒体<b>见刊链接</b>、回收传播数据，形成效果看板，指导下一轮优化</td>
+            <td>见刊清单、数据看板</td>
+            <td>监测看板</td>
+            <td>见刊量、声量</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">长尾口碑与承接转化不在乙方执行范围内，故不列入；数据回收（见刊与效果数据）为乙方执行环节，构成本次传播的闭环。</div>
+  </div>
+</section>
+
+<!-- ===== 7 渠道与节奏 ===== -->
+<section id="s7">
+  <div class="sec-head">
+    <div class="sec-no">07</div>
+    <div><h2>渠道组合与执行节奏</h2><p>每个渠道都要回答"为什么用它"</p><span class="badge team">团队确认</span></div>
+  </div>
+
+  <div class="card">
+    <h3>渠道矩阵</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>渠道</th><th>服务目标</th><th>触达人群</th><th>内容形式</th><th>衡量方式</th></tr></thead>
+        <tbody>
+          <tr><td>车展线下体验</td><td>集中引爆、制造声量</td><td>媒体、达人、现场观众</td><td>展台体验、现场打卡</td><td>到场量、现场内容产出</td></tr>
+          <tr><td>汽车垂类媒体</td><td>建立专业认知</td><td>购车决策人群</td><td>通稿、专题稿、对比稿</td><td>见刊量、推荐位、阅读互动</td></tr>
+          <tr><td>平台专访 / 高层对话</td><td>品牌与战略背书</td><td>行业、深度用户</td><td>QA 专访、高管访谈</td><td>发布量、播放 / 阅读</td></tr>
+          <tr><td>KOL / 达人内容</td><td>圈层渗透、口碑扩散</td><td>年轻与兴趣圈层</td><td>打卡、生活方式内容</td><td>传播量、互动、转发</td></tr>
+          <tr><td>试驾活动</td><td>体验深化、转化前置</td><td>意向用户、区域人群</td><td>试驾体验、体验稿</td><td>试驾邀约、内容量</td></tr>
+          <tr><td>社交与线上触点</td><td>持续扩散与承接</td><td>泛人群</td><td>话题、短视频、图文</td><td>声量、搜索、咨询</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>两阶段执行节奏</h3>
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>维度</th><th>车展上市期</th><th>试驾传播期</th></tr></thead>
+        <tbody>
+          <tr><td><strong>阶段目标</strong></td><td>集中引爆声量、建立定位认知</td><td>体验深化、推动试驾意向</td></tr>
+          <tr><td><strong>核心信息</strong></td><td>定位 + 设计 + 价格价值</td><td>运动驾控 + 真实口碑</td></tr>
+          <tr><td><strong>策略侧重</strong></td><td>集中引爆 · 对比定位</td><td>体验承接 · 口碑沉淀</td></tr>
+          <tr><td><strong>关键动作</strong></td><td>车展传播、平台专访、达人集中发布</td><td>区域试驾、体验内容、口碑扩散</td></tr>
+          <tr><td><strong>协同关系</strong></td><td>品牌 + 媒介 + 内容 + 活动</td><td>媒介 + 活动 + 区域终端</td></tr>
+          <tr><td><strong>调整机制</strong></td><td>按渠道表现调整资源分配</td><td>按试驾转化调整区域投放</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8 KPI ===== -->
+<section id="s8">
+  <div class="sec-head">
+    <div class="sec-no">08</div>
+    <div><h2>KPI 体系</h2><p>用指标衡量乙方可负责的产出与传播表现</p><span class="badge team">团队 / 甲方</span></div>
+  </div>
+
+  <div class="card">
+    <h3>KPI 指标体系</h3>
+    <p style="margin-top:0">本项目回收数据量有限，指标只有 <b>L1</b>、<b>L2</b> 层级；<b>L3</b>、<b>L4</b> 层级归属品牌方。</p>
+    <p style="margin:10px 0 0"><b>L1 执行产出</b>：媒体 / 达人到场打卡约 100+，达人内容产出约 300+，平台专访 / 直播 2 场，稿件按排期见刊并以见刊清单统计发布完成率。</p>
+    <p style="margin:8px 0 0"><b>L2 传播表现</b>：平台首页推荐约 12 次，传播声量约 100 万+；曝光 / 阅读 / 播放 / 互动量以平台后台口径统计。</p>
+    <div class="note">数据为项目当时的统计口径与量级参考，已标注"约"。</div>
+  </div>
+</section>
+
+<hr class="sep">
+<p style="font-size:12px;color:var(--muted);margin:0">说明：上文 01–08 为面向 408X 上市整合传播的乙方执行层方案（背景与目标、品牌与产品理解、竞品对标诊断、核心策略、内容体系、传播节点与方式、渠道与节奏、KPI），各板块已标注主导方。全文已隐去客户与代理方名称；竞品参数来源于公开配置信息。各小标题可点击定位跳转。</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0">标致 408X 上市整合传播方案｜本方案基于真实项目经历与公开产品 / 竞品信息整理，用于展示传播策划与执行能力。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var n=0;
+  document.querySelectorAll('.card > h3').forEach(function(h){
+    n++; if(!h.id) h.id='h-'+n;
+    var t=h.textContent.trim();
+    h.innerHTML='<a class="hlink" href="#'+h.id+'" title="点击定位到本节">'+t+'<span class="hmark">§</span></a>';
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>户外品牌抖音达人种草整合营销方案</title>
+<style>
+:root{
+  --ink:#0F172A; --slate:#475569; --muted:#64748B; --faint:#94A3B8;
+  --line:#E2E8F0; --bg:#F8FAFC; --card:#FFFFFF;
+  --brand:#16305B; --brand-2:#2B4FA8; --brand-soft:#EEF3FF;
+  --acc:#0E7490; --acc-soft:#ECFEFF;
+  --warn:#B45309; --warn-soft:#FFF7ED;
+  --radius:14px; --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--brand-2);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:54px}
+.nav .brand{font-weight:800;font-size:13.5px;color:var(--brand);letter-spacing:.02em;white-space:nowrap}
+.nav ul{display:flex;gap:1px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto}
+.nav li a{display:block;padding:6px 9px;font-size:12.5px;color:var(--slate);border-radius:8px;white-space:nowrap}
+.nav li a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+
+.cover{background:linear-gradient(180deg,#0E1E3A 0%,#17325F 100%);color:#fff;padding:64px 0 48px}
+.cover .kicker{display:inline-block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#9DB4E0;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.cover h1{font-size:38px;line-height:1.25;margin:0 0 12px;font-weight:800;letter-spacing:.01em}
+.cover .sub{font-size:15.5px;color:#C7D3E8;max-width:720px;margin:0 0 26px}
+.cover .tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.cover .tags span{font-size:12.5px;color:#DCE6F7;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 13px}
+.cover .note{font-size:12px;color:#93A6C8;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;max-width:760px}
+
+main{padding:6px 0 40px}
+section{padding:40px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.sec-no{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:var(--brand);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.sec-head h2{font-size:23px;margin:1px 0 3px;font-weight:800;letter-spacing:.01em}
+.sec-head p{margin:0;color:var(--muted);font-size:13.5px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px}
+.card h3{font-size:16px;margin:0 0 12px;font-weight:800;display:flex;align-items:center;gap:8px}
+.card h3::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--brand-2);display:inline-block}
+.card h4{font-size:14px;margin:16px 0 8px;font-weight:800;color:var(--brand)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}.cover h1{font-size:29px}}
+
+.blk{border-radius:12px;padding:15px 17px;border:1px solid var(--line);background:#fff}
+.blk .tag{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--brand-2);display:block;margin-bottom:6px}
+.blk.acc{border-color:#BAE6EE;background:linear-gradient(180deg,#F6FEFF,#fff)}
+.blk.acc .tag{color:var(--acc)}
+.blk.warn{border-color:#FCD9A8;background:linear-gradient(180deg,#FFFBF5,#fff)}
+.blk.warn .tag{color:var(--warn)}
+ul.clean{margin:6px 0 0;padding-left:18px;color:var(--slate)}
+
+.tbl{width:100%;border-collapse:collapse;font-size:13px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl thead th{background:#F1F5F9;color:var(--ink);text-align:left;padding:9px 12px;font-weight:700;border-bottom:1px solid var(--line)}
+.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--slate);vertical-align:top}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl tbody tr:nth-child(even){background:#FAFBFD}
+
+.note{font-size:12px;color:var(--muted);background:#F8FAFC;border:1px dashed var(--line);border-radius:10px;padding:10px 12px;margin-top:12px}
+
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:999px;padding:3px 10px;border:1px solid transparent;white-space:nowrap}
+.badge.client{color:#1D4ED8;background:#EFF4FF;border-color:#C7D7FB}
+.badge.team{color:#0E7490;background:#ECFEFF;border-color:#BAE6EE}
+.badge.me{color:#B45309;background:#FFF7ED;border-color:#FCD9A8}
+.sec-head .badge{margin-top:7px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:14px 0 4px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+
+.chain{display:grid;gap:10px}
+.chain .c{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff}
+.chain .c b{font-size:13.5px;color:var(--brand)}
+.chain .c ul{margin:0;padding-left:16px;color:var(--slate);font-size:12.5px}
+@media(max-width:820px){.chain .c{grid-template-columns:1fr}}
+
+/* anchors & clickable headings */
+.card>h3 .hlink{color:inherit;text-decoration:none;display:inline-flex;align-items:center}
+.card>h3 .hmark{opacity:0;margin-left:6px;color:var(--brand-2);font-size:12px;font-weight:800;transition:opacity .15s}
+.card>h3:hover .hmark{opacity:.75}
+
+.embed{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.embed iframe{width:100%;height:780px;border:0;display:block}
+
+footer{border-top:1px solid var(--line);background:#fff;padding:24px 0;margin-top:28px;color:var(--muted);font-size:12.5px}
+@media print{
+  .nav{display:none}
+  section{padding:18px 0 4px;page-break-inside:avoid}.card{box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">达人种草整合营销方案</div>
+    <ul>
+      <li><a href="#s1">种草目标</a></li>
+      <li><a href="#s2">品牌简介</a></li>
+      <li><a href="#s3">竞品对标</a></li>
+      <li><a href="#s4">核心策略</a></li>
+      <li><a href="#s5">达人筛选与内容</a></li>
+      <li><a href="#s6">执行流程</a></li>
+      <li><a href="#s7">渠道与节奏</a></li>
+      <li><a href="#s8">KPI</a></li>
+      <li><a href="#appendix">复盘报告</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="cover">
+  <div class="wrap">
+    <span class="kicker">整合营销提案 · 达人种草案例</span>
+    <h1>户外品牌抖音达人种草整合营销方案</h1>
+    <p class="sub">以数据化选号与分层达人矩阵为核心，覆盖达人筛选、试投验证、集中投放到效果复盘的红人营销全流程；达人筛选为投放前准备，投放周期 21 天。</p>
+    <div class="tags">
+      <span>抖音种草</span><span>达人矩阵</span><span>双维度评估</span><span>赛道优选</span>
+    </div>
+    <div class="note">本方案基于一次真实的抖音达人种草项目整理，按乙方承接甲方种草任务的提案口径撰写；为保护商业信息，已隐去品牌方与代理方名称，数据均标注统计口径。</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="legend">
+    <span><span class="badge client">甲方给定</span> 品牌方下达的任务与既有信息</span>
+    <span><span class="badge team">团队确认</span> 项目团队共同确认的方案层内容</span>
+    <span><span class="badge me">本人参与</span> 个人实际参与 / 负责的环节</span>
+  </div>
+
+<!-- ===== 1 种草目标 ===== -->
+<section id="s1">
+  <div class="sec-head">
+    <div class="sec-no">01</div>
+    <div><h2>种草目标</h2><p>品牌为什么种草、希望种草带来什么</p><span class="badge client">甲方给定</span></div>
+  </div>
+
+  <div class="card">
+    <h3>品牌当时的种草需求与目标</h3>
+    <ul class="clean">
+      <li><b>为什么种草</b>：新品季缺乏内容声量，竞品均在加码达人内容，需要借达人真实使用场景快速破圈；</li>
+      <li><b>希望带来什么</b>：品牌曝光与人群破圈、真实场景内容沉淀，并为电商转化蓄水；</li>
+      <li><b>附带目标</b>：验证达人筛选方法与矩阵打法，沉淀可复用的达人资源库。</li>
+    </ul>
+    <div class="note">投放结果（声量、转化等）见 08 KPI 与文末复盘报告，不作为当时目标。</div>
+  </div>
+</section>
+
+<!-- ===== 2 品牌与人群 ===== -->
+<section id="s2">
+  <div class="sec-head">
+    <div class="sec-no">02</div>
+    <div><h2>品牌简介与人群洞察</h2><p>品牌信息源自官网与公开资料</p><span class="badge client">甲方给定</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>品牌简介</h3>
+      <ul class="clean">
+        <li><b>品牌</b>：创始于 1930 年的国民户外品牌，主打"功能性 + 年轻化"；</li>
+        <li><b>核心商品</b>：冲锋衣（品类第一）、户外鞋履、露营装备；</li>
+        <li><b>价格区间</b>：主力价位约 200–800 元，大众性价比定位。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>人群洞察</h3>
+      <ul class="clean">
+        <li><b>核心人群</b>：18–35 岁年轻群体；</li>
+        <li><b>两类画像</b>：学生 / 初入职场（爱 CP 日常、高颜值内容），20–30 岁自然旅行人群（为"出片"买单）；</li>
+        <li><b>决策点</b>：性价比 + 场景适配（露营、徒步、通勤穿搭）。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3 竞品对标 ===== -->
+<section id="s3">
+  <div class="sec-head">
+    <div class="sec-no">03</div>
+    <div><h2>竞品种草对标</h2><p>看清行业基准，找到选号优化空间</p><span class="badge me">本人参与</span></div>
+  </div>
+
+  <div class="card">
+    <h3>三竞品种草打法对比</h3>
+    <div class="tbl" style="overflow:auto">
+      <table class="tbl">
+        <thead><tr><th>竞品</th><th>种草打法</th><th>可借鉴点</th></tr></thead>
+        <tbody>
+          <tr><td>安德玛</td><td>专业运动人设 + 头部达人背书</td><td>内容权威感</td></tr>
+          <tr><td>凯乐石</td><td>垂类硬核户外内容 + 场景深度</td><td>垂类信任</td></tr>
+          <tr><td>伯希和</td><td>高频腰部达人铺量 + 促销信息前置</td><td>转化效率</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin:12px 0 0">对标的结论构成我方基准：行业均值 CPM 约 <b>37.59 元</b>，且 <b>59.06%</b> 的达人 CPM 高于均值——说明行业普遍"买贵了"，达人选号存在明确的优化空间，这正是本方案策略的出发点。</p>
+    <div class="note">竞品信息来源于公开资料与投放观察，仅用于策略对标。</div>
+  </div>
+</section>
+
+<!-- ===== 4 核心策略 ===== -->
+<section id="s4">
+  <div class="sec-head">
+    <div class="sec-no">04</div>
+    <div><h2>核心策略</h2><p>把预算从"买达人名气"转向"买有效播放与转化"</p><span class="badge team">团队确认</span></div>
+  </div>
+
+  <div class="card">
+    <h3>策略主线</h3>
+    <p style="margin-top:0"><b>数据化选号 × 分层达人矩阵 × 高转化赛道</b>：以双维度数据评估替代经验选号，用三层矩阵适配预算，用赛道优选提升内容命中率的确定性。</p>
+  </div>
+
+  <div class="grid3">
+    <div class="blk acc">
+      <span class="tag">打法一 · 双维度选号</span>
+      <p style="margin:0;font-size:13px;color:var(--slate)">以 CPM（性价比）× 单位转化成本（效果）交叉评估达人，淘汰"高成本低转化"达人，执行细节见 05。</p>
+    </div>
+    <div class="blk">
+      <span class="tag">打法二 · 三层达人矩阵</span>
+      <p style="margin:0;font-size:13px;color:var(--slate)">头部背书 + 腰部种草 + 长尾铺量，按预算档位灵活组合，兼顾信任建立与规模放量。</p>
+    </div>
+    <div class="blk warn">
+      <span class="tag">打法三 · 赛道聚焦</span>
+      <p style="margin:0;font-size:13px;color:var(--slate)">向音乐、旅行、摄影、三农、颜值等高转化高曝光赛道集中，淘汰二次元、测评类低效赛道。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5 达人筛选与内容 ===== -->
+<section id="s5">
+  <div class="sec-head">
+    <div class="sec-no">05</div>
+    <div><h2>达人筛选与内容体系</h2><p>用数据库和双维度标准锁定"对的达人"</p><span class="badge me">本人参与</span></div>
+  </div>
+
+  <div class="card">
+    <h3>达人库搭建与盘点</h3>
+    <p style="margin-top:0">整合多平台达人数据、统一指标口径，清洗异常样本后搭建达人分析宽表与预估看板，盘点候选达人 <b>500+ 位</b>，按<b>「户外 / 活力 / 漂亮」</b>三个关键词匹配内容调性初筛，再按头部 / 肩部 / 腰部 / 尾部四档分层管理；投放前基准：整体中位 CPM <b>31.41 元</b>，平均互动率 <b>7.10%</b>、完播率 <b>15.01%</b>。</p>
+    <div class="note">数据为项目当时的统计口径与量级参考。</div>
+  </div>
+
+  <div class="card">
+    <h3>双维度筛选标准</h3>
+    <p style="margin-top:0">建立 <b>CPM（性价比）× 单位转化成本（效果）</b>双重评估标准，交叉定位两类标杆达人：CPM 低于行业均值 <b>37.59 元</b>的"高性价比型"，与单位转化成本低于均值、有效观看与转化率双高的"规模增效型"；再下钻标杆达人的内容风格、粉丝画像与转化路径，识别高转化达人的共性特征，形成可复用的选号标准并回写达人库评级。</p>
+  </div>
+
+  <div class="card">
+    <h3>赛道优选与内容方向</h3>
+    <p style="margin-top:0">按内容类型聚合分析转化率与有效观看：<b>重点关注</b>音乐、旅行、摄影、三农、颜值赛道，<b>次要关注</b>剧情、健身、穿搭、亲子，<b>淘汰</b>二次元、测评类低效赛道。在此之上按三个维度制定达人 Brief：<b>内容形式</b>（生活化场景、自然真实而非摆拍）、<b>视觉情绪</b>(自然色系、真实户外体验)、<b>互动引导</b>（功能自然露出 + 评论区轻量引导品牌话题）。</p>
+  </div>
+</section>
+
+<!-- ===== 6 执行流程 ===== -->
+<section id="s6">
+  <div class="sec-head">
+    <div class="sec-no">06</div>
+    <div><h2>执行流程与节点</h2><p>达人筛选（投放前）→ 试投 → 集中投放，投放周期 21 天</p><span class="badge me">本人参与</span></div>
+  </div>
+
+  <div class="card">
+    <h3>种草流程：达人筛选 → 试投 → 集中投放</h3>
+    <div class="chain">
+      <div class="c"><b>前置准备 · 达人筛选（投放前，不计入 21 天）</b><ul><li>与甲方对齐种草需求与预算盘；</li><li>从 500+ 位候选达人中按「户外 / 活力 / 漂亮」关键词匹配内容调性，结合 CPM 与粉丝画像初筛，输出各层级试投名单。</li></ul></div>
+      <div class="c"><b>阶段一 · 试投（D1–D7）</b><ul><li>各层级筛选数位达人小规模投放，投入<b>预算的 10%–20%</b>，看哪些达人、哪个内容方向效果更好；</li><li>关键评估指标：<b>转化率</b>与<b>单位转化成本</b>，据此筛出更优达人与赛道。</li></ul></div>
+      <div class="c"><b>阶段二 · 集中投放（D8–D21）</b><ul><li>依据试投数据将名单收敛至最终投放的 <b>149 位</b>达人，按"预热—爆发—延续"节奏集中放量；</li><li>按日监测播放 / 互动 / 转化，异常达人及时止损替换。</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7 渠道与节奏 ===== -->
+<section id="s7">
+  <div class="sec-head">
+    <div class="sec-no">07</div>
+    <div><h2>渠道与投放节奏</h2><p>抖音为主、小红书为辅</p><span class="badge team">团队确认</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>渠道组合</h3>
+      <ul class="clean">
+        <li><b>抖音（约 80%）</b>：主要投放阵地，短视频种草 + 购物车承接转化；</li>
+        <li><b>小红书（约 20%）</b>：辅助阵地，种草笔记承接搜索与口碑沉淀。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>预算与放量节奏</h3>
+      <ul class="clean">
+        <li><b>试投（10%–20% 预算）</b>：小规模验证达人与内容方向，转化率 + 单位转化成本定优劣；</li>
+        <li><b>集中投放</b>：验证通过后剩余预算分两波放量，先头部背书，后腰部集中冲量；</li>
+        <li><b>收尾</b>：中长尾铺量维持声量长尾，与电商档期对齐。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8 KPI ===== -->
+<section id="s8">
+  <div class="sec-head">
+    <div class="sec-no">08</div>
+    <div><h2>KPI 体系</h2><p>用指标衡量乙方可负责的产出与传播表现</p><span class="badge team">团队 / 甲方</span></div>
+  </div>
+
+  <div class="card">
+    <h3>KPI 指标体系</h3>
+    <p style="margin-top:0">本项目回收数据量有限，指标只有 <b>L1</b>、<b>L2</b> 层级；<b>L3</b>、<b>L4</b> 层级归属品牌方。</p>
+    <p style="margin:10px 0 0"><b>L1 执行产出</b>：从 <b>500+ 位</b>候选达人中最终投放 <b>149 位</b>，上线种草视频 <b>180 条</b>，覆盖头 / 肩 / 腰 / 尾四档层级。</p>
+    <p style="margin:8px 0 0"><b>L2 传播表现</b>：种草视频单条播放 <b>10w+</b>，种草消耗 <b>447.5 万元</b>，总声量约 <b>1.2 亿</b>，间接转化 <b>14.5 万人</b>；平均转化率 <b>0.12%</b>（约为竞品综合的 6 倍），平均转化成本 <b>30.93 元/人</b>（约为行业均值的 1/12），有效种草率 <b>72%</b>、无效种草率 <b>10%</b>。</p>
+    <div class="note">数据截至 7 月 10 日，为项目当时的统计口径；竞品基准为安德玛 / 凯乐石 / 伯希和同期数据，详见文末复盘报告。</div>
+  </div>
+</section>
+
+<!-- ===== 附录 复盘报告 ===== -->
+<section id="appendix">
+  <div class="sec-head">
+    <div class="sec-no">附</div>
+    <div><h2>项目复盘报告</h2><p>投放效果盘点 · 达人分析 · 内容方向洞察</p></div>
+  </div>
+
+  <div class="card">
+    <h3>复盘报告（在线版）</h3>
+    <p style="margin-top:0">数据截至 7 月 10 日 · 对标安德玛 / 凯乐石 / 伯希和 · <a href="https://primarystudents.github.io/xiaoq/works/insight/index.html" target="_blank" rel="noopener">在新窗口打开完整报告 ↗</a></p>
+    <div class="embed"><iframe src="https://primarystudents.github.io/xiaoq/works/insight/index.html" loading="lazy" title="项目复盘报告"></iframe></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font-size:12px;color:var(--muted);margin:0">说明：上文 01–08 为面向户外品牌抖音达人种草的乙方执行层方案（种草目标、品牌简介与人群洞察、竞品对标、核心策略、达人筛选与内容、执行流程、渠道与节奏、KPI），各板块已标注主导方；附录为项目复盘报告在线版。全文已隐去品牌方与代理方名称；品牌信息源自官网及公开资料。各小标题可点击定位跳转。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var n=0;
+  document.querySelectorAll('.card > h3').forEach(function(h){
+    n++; if(!h.id) h.id='h-'+n;
+    var t=h.textContent.trim();
+    h.innerHTML='<a class="hlink" href="#'+h.id+'" title="点击定位到本节">'+t+'<span class="hmark">§</span></a>';
+  });
+})();
+</script>
+</body>
+</html>
